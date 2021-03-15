@@ -16,7 +16,7 @@
 
 [Postman](https://www.youtube.com/watch?v=cR_FqveTewo)
 
-[API Test](https://reqres.in/api/users/2)
+[API Test](https://reqres.in)
 
 [OWIN](http://owin.org/)
 
