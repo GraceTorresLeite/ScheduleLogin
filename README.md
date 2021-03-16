@@ -10,13 +10,16 @@
 
 
 **View login register**
+
 <img src="/img/login.png" width="500" height="200">
 
 **Password recovery with email sending**
-<img src="/img/emailrecovery.png" width="400" height="200">
+
+<img src="/img/emailrecovery.png" width="550" height="150">
 
 **Recovery link received by the customer**
-<img src="/img/proofSendEmail.png" width="500" height="200">
+
+<img src="/img/proofSendEmail.png" width="600" height="300">
 
 
 ### References sourches
