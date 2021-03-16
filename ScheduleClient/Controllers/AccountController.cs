@@ -75,7 +75,6 @@ namespace ScheduleClient.Controllers
                     AddError(result);
                 }
 
-
             }
             return View(model);//algo deu errado devolver o model
         }
@@ -88,7 +87,7 @@ namespace ScheduleClient.Controllers
             //facilitando a vida do cliente para que o mesmo não precise copiar e colar o código, e sim já ser direcionado para tal
             var linkCallBack =
                 Url.Action(
-                    "EmailConfirmation",
+                    "ConfirmEmail",
                     "Account",
                     new { userId = user.Id, token = token },
                     Request.Url.Scheme);//retorna o protocolo e valida o link
@@ -106,9 +105,17 @@ namespace ScheduleClient.Controllers
                 ModelState.AddModelError("", error);
 
         }
-        public ActionResult EmailConfirm(string userId, string token)
+        public async Task<ActionResult> ConfirmEmail(string userId, string token)
         {
-            throw new NotImplementedException();
+            if (userId == null || token == null)
+                return View("Error");
+
+            var result = await UserManager.ConfirmEmailAsync(userId, token);
+
+            if (result.Succeeded)
+                return RedirectToAction("Index", "Home");
+            else
+                return View("Error");
         }
     }
 }

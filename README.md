@@ -9,7 +9,14 @@
 |     3      |validate business and security rules        |   ✔   |
 
 
+**View login register**
 <img src="/img/login.png" width="500" height="200">
+
+**Password recovery with email sending**
+<img src="/img/emailrecovery.png" width="400" height="200">
+
+**Recovery link received by the customer**
+<img src="/img/proofSendEmail.png" width="500" height="200">
 
 
 ### References sourches

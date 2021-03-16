@@ -28,7 +28,7 @@ namespace ScheduleClient.App_Start.Identity
                 //SMTP - SIMPLE MAIL TRANSPORT PROTOCOL
                 using (var smtpClient = new SmtpClient())
                 {
-                    smtpClient.UseDefaultCredentials = false;
+                    smtpClient.UseDefaultCredentials = true;
                     smtpClient.Credentials = new NetworkCredential(EMAIL_ORIGIN, EMAIL_PASSWORD);
 
                     smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
@@ -36,7 +36,7 @@ namespace ScheduleClient.App_Start.Identity
                     smtpClient.Port = 587;
                     smtpClient.EnableSsl = true;
 
-                    smtpClient.Timeout = 20000; 
+                    smtpClient.Timeout = 20_000; 
 
                     await smtpClient.SendMailAsync(messageEmail);
                 }
